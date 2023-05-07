@@ -1,0 +1,19 @@
+---
+// site layout
+import SiteLayout from "../layouts/Site.astro";
+
+// home page sections
+import HeroSection from "../components/home/Hero.astro";
+import WorkSection from "../components/home/Work.astro";
+import TeamSection from "../components/home/Team.astro";
+import FeaturesSection from "../components/home/Features.astro";
+---
+
+<SiteLayout title="Home">
+  <div>
+    <HeroSection />
+    <FeaturesSection />
+    <WorkSection />
+    <TeamSection />
+  </div>
+</SiteLayout>

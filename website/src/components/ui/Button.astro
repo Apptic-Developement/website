@@ -1,0 +1,24 @@
+---
+// props
+type Props = {
+  title: string;
+  shadow: boolean;
+  css?: string;
+};
+const { title = "Button", css = "", shadow = true } = Astro.props;
+---
+
+<button
+  type="button"
+  class={`${css} ${
+    shadow ? "hover:shadow-sm hover:shadow-indigo-500/50" : ""
+  } group hover:scale-100 hover:bg-black scale-90 ease-in-out transition p-0.5 bg-gradient-to-tl from-indigo-500 via-indigo-600 to-indigo-700 rounded-lg`}
+>
+  <div class="font-bold bg-black rounded-lg h-full w-full py-2 px-5">
+    <div
+      class="text-transparent bg-clip-text bg-gradient-to-tl from-indigo-600 via-indigo-500 to-indigo-700 shadow-sm font-semibold"
+    >
+      {title}
+    </div>
+  </div>
+</button>

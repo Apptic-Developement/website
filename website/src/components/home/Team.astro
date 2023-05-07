@@ -1,0 +1,53 @@
+---
+// imports
+import DevCard from "../cards/Dev.astro";
+import Section from "../ui/Section.astro";
+
+// Dev type
+type Dev = {
+  name: string;
+  pos: string;
+  avatar: string;
+  content?: string;
+  contact?: number;
+  github?: string;
+};
+
+// dev list
+const devs: Array<Dev> = [
+  {
+    name: "Pranoy Majumdar",
+    content:
+      "Heya! I'm Pranoy Majumdar, a student currently living in Odisha, India. I'm learning programming through small projects on the side.",
+    pos: "Founder, Senior Developer",
+    contact: 942683245106065448,
+    github: "PranoyMajumdar",
+    avatar:
+      "https://cdn.discordapp.com/avatars/942683245106065448/afabeeecc85fafcc1100709481824350.webp?size=2048",
+  },
+  {
+    name: "Arnav K",
+    pos: "Co-founder, Developer",
+    content:
+      "Hey there, I'm Arnav, a student from Haryana, India. In my free time, I enjoy reading about new technologies and tinkering with gadgets.",
+    contact: 739454321661313025,
+    github: "ArnavK-09",
+    avatar:
+      "https://cdn.discordapp.com/avatars/739454321661313025/e5c17038217f4c0fc04830eae8ed1ac1.webp?size=2048",
+  },
+];
+---
+
+<Section id="team" heading="Dev" highlight="Team" divider={false}>
+  <div
+    class="overflow-x-auto md:overflow-hidden md:p-5 md:gap-5 md:grid md:grid-cols-2 flex py-5"
+  >
+    {
+      devs.map((dev) => (
+        <>
+          <DevCard {...dev} />
+        </>
+      ))
+    }
+  </div>
+</Section>

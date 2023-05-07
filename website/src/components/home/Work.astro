@@ -1,0 +1,28 @@
+---
+// imports
+import Section from "../ui/Section.astro";
+import WorkCard from "../cards/Work.astro";
+
+// work item type
+type WorkItem = {
+  title: string;
+  url: string;
+  image: string;
+  content: string;
+};
+const workList: Array<WorkItem> = [
+  {
+    title: "Dismake.py",
+    url: "https://github.com/Apptic-Developement/dismake",
+    image:
+      "https://repository-images.githubusercontent.com/608636716/75cd5a57-9570-476d-84c2-a1d66193769e",
+    content: `Dismake is a robust framework designed to assist you in developing stateless and independent Discord bots that employ Slash Commands. The framework is built on top of the FastAPI, a high-performance Python web framework, making it easy to use, efficient, and speedy.`,
+  },
+];
+---
+
+<Section id="work" heading="Our" highlight="Work">
+  <div class="gap-y-2">
+    {workList.map((work) => <WorkCard {...work} />)}
+  </div>
+</Section>

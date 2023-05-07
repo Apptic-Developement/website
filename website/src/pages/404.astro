@@ -1,0 +1,23 @@
+---
+// layout
+import SiteLayout from "../layouts/Site.astro";
+---
+
+<SiteLayout title="Page Not Found">
+  <div class="h-screen w-screen overflow-hidden flex items-center">
+    <div class="mx-auto text-center">
+      <h1
+        class="font-extrabold text-8xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-700 via-indigo-500 to-indigo-600 tracking-widest"
+      >
+        404!
+      </h1>
+      <a href="/"
+        ><p
+          class="text-1xl text-white/80 font-semibold mt-3 hover:underline hover:scale-105"
+        >
+          Page Not Found...
+        </p></a
+      >
+    </div>
+  </div>
+</SiteLayout>

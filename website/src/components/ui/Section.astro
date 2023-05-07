@@ -1,0 +1,38 @@
+---
+// props
+type Props = {
+  heading: string;
+  highlight: string;
+  id?: string;
+  divider?: boolean;
+};
+const {
+  id,
+  divider = true,
+  heading = "Site",
+  highlight = "Section",
+} = Astro.props;
+---
+
+<section class="px-1" id={id}>
+  <h2 class="text-4xl ml-2 pl-1.5 text-left tracking-wide pb-2 font-bold">
+    <span
+      class="inline-block w-2 p-0 zigzag-underline border-transparent border-1 bg-gradient-to-r from-indigo-600 via-indigo-600 to-indigo-700 transform -skew-x-12 transform-origin-left text-transparent text-thin"
+      >.</span
+    >
+    {heading}
+    <span
+      class="text-transparent bg-clip-text bg-gradient-to-tl from-indigo-900 via-indigo-500 to-indigo-700"
+    >
+      {highlight}
+    </span>
+  </h2>
+  <div class="mx-auto my-3 md:mt-6">
+    <slot />
+  </div>
+  {
+    divider && (
+      <hr class="h-px my-8 bg-[#141414] brightness-200 mx-7 border-0" />
+    )
+  }
+</section>

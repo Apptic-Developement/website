@@ -1,0 +1,60 @@
+---
+// props
+export interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+
+// variables
+let description = `Apptic Dev is a dev company that creates pro solutions for Discord communities like bot and website development and tailored packages to meet client needs`;
+let finalTitle = `Apptic Development ${title ? `- ${title}` : ""}`;
+
+// imports
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {/* Meta tags */}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    {/* Basic Tags */}
+    <title>{finalTitle}</title>
+    <meta name="description" content={description} />
+
+    {/* Og  & Twitter Tags */}
+    <meta property="og:title" content={finalTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/banner.png" />
+    <meta property="og:url" content="https://apptic.deno.dev" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:title" content={finalTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="/banner.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body class="text-white">
+    <header><Navbar /></header>
+    <main class="pt-20">
+      <slot />
+    </main>
+    <footer>
+      <Footer />
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  /* Global Css */
+  html,
+  body {
+    font-family: system-ui, sans-serif;
+    background-color: #000000;
+    scroll-behavior: smooth;
+  }
+</style>
