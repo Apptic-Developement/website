@@ -1,0 +1,25 @@
+---
+// props
+export interface Props {
+    icon: any;
+    title: string;
+    description: string;
+}
+const {title,description,icon } = Astro.props;
+import IconTest from "../../icons/Discord.astro"; // temp 
+---
+<div class="rounded-lg p-1 from-indigo-600 via-indigo-500 to-indigo-800 bg-gradient-to-tl">
+<div class="bg-[#141414] rounded-lg w-full h-full p-3">
+<div class="text-center ">
+<div class="w-full flex items-center justify-center">
+<div class="h-11 my-4 w-11 fill-indigo-700 rounded-full">
+<icon />
+</div>
+</div>
+<h3 class="text-2xl tracking-wide text-indigo-600">{title}</h3>
+<p class="text-md text-white/70">{description}</p>
+</div>
+
+</div>
+
+</div>

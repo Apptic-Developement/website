@@ -1,5 +1,30 @@
 ---
+// imports 
+import FeatureCard from "../cards/Feature.astro";
 import Section from "../ui/Section.astro";
+
+// import icons 
+import IconTest from "../../icons/Github.astro";
+
+// type
+type FeatureProps = {
+    title: string;
+    icon: any;
+    description: string;
+}
+
+// features list 
+const featuresList: Array<FeatureProps> = [{
+    title: "Website Development",
+    description: "Create site",
+    icon: IconTest,
+}];
 ---
 
-<Section id="capabilities" heading="Fr" highlight="Capabilities" />
+<Section id="capabilities" heading="Fr" highlight="Capabilities" >
+<div class="mx-5">
+{featuresList.map((feature) => (
+    <FeatureCard {...feature} />
+))}
+</div>
+</Section>
