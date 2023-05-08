@@ -1,7 +1,5 @@
 name: Deploy on Deno 
 on:
-  push: 
-    branches: ["*"]
   release:
     types: [published, edited]
 
