@@ -1,0 +1,19 @@
+---
+// site layout
+import SiteLayout from "../layouts/Site.astro";
+
+// imports
+import BlogCard from "../components/cards/Blog.astro";
+import Section from "../components/ui/Section.astro";
+---
+
+<SiteLayout title="Blog">
+  <div class="my-2">
+    <Section heading="Read Our" highlight="Blog">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 w-full mx-2 px-2">
+        <BlogCard />
+        <BlogCard />
+      </div>
+    </Section>
+  </div>
+</SiteLayout>
