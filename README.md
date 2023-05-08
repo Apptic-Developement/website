@@ -1,6 +1,6 @@
 # Apptic Development Website
 
-> **This repository contains the code for the Apptic Development website, which can be accessed at [apptic.deno.dev](https://apptic-dev.deno.dev)**
+> **This repository contains the code for the Apptic Development website, which can be accessed at [apptic-dev.deno.dev](https://apptic-dev.deno.dev)**
 
 <p align="center"> 
     <a href="https://github.com/Apptic-Developement"> 
