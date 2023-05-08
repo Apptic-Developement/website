@@ -1,8 +1,10 @@
-name: Deploy
+name: Deploy on Deno 
 on:
-  push: ["*"]
+  push: 
+    branches: ["*"]
   release:
     types: [published, edited]
+
 
 jobs:
   deploy:
