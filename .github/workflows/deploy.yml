@@ -1,7 +1,7 @@
 name: Deploy on Deno 
 on:
-  release:
-    types: [published]
+  push:
+    branches: [main]
 
 
 jobs:
