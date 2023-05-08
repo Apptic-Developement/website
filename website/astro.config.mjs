@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 
+// deno adapter
 import deno from "@astrojs/deno";
 
 // https://astro.build/config
