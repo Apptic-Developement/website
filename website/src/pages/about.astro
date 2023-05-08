@@ -1,16 +1,49 @@
---- 
- // site layout 
-  import SiteLayout from "../layouts/Site.astro"; 
-   
-   // imports 
-   import Section from "../components/ui/Section.astro"
-   ---
+---
+// site layout
+import SiteLayout from "../layouts/Site.astro";
+
+// imports
+import Section from "../components/ui/Section.astro";
+---
+
 <SiteLayout title="About Us">
-<div class="my-2">
-<Section heading="About" highlight="Us">
-<div class="mx-2 px-2">
-<p>TODO</p>
-</div>
-</Section>
-</div>
+  <div class="m-2 md:m-5">
+    <Section heading="About" highlight="Us">
+      <div
+        class="text-1xl font-medium md:mx-5 md:font-normal md:text-3xl mx-2 px-2 text-white/80"
+      >
+        <p>
+          Welcome to Apptic Development - small but innovative team of
+          developers dedicated to creating cutting-edge solutions in the field
+          of technology. We are a group of tech enthusiasts who are passionate
+          about using our skills and expertise to create amazing products that
+          make a difference in the world.
+          <br />
+          <br />
+          At Apptic Development, we specialize in creating bots, websites, Discord
+          servers, Python and JS packages, and other innovative technology solutions.
+          Our team consists of friendly and talented developers who are always up-to-date
+          with the latest trends and technologies in the industry.
+          <br />
+          <br />
+          Our mission is to help our clients achieve their goals by providing them
+          with custom, high-quality solutions that are tailored to their specific
+          needs. We believe in building long-lasting relationships with our clients
+          and working closely with them to ensure that they get the results they
+          are looking for.
+          <br />
+          <br />
+          As a new company, we are constantly looking for ways to improve and grow.
+          We value feedback from our clients and use it to continually refine our
+          processes and improve our products. Our goal is to become a leading developer
+          in the industry and to make a positive impact on the world through our
+          work.
+          <br />
+          <br />
+          Thank you for considering Apptic Development for your technology needs.
+          We look forward to working with you and helping you achieve your goals.
+        </p>
+      </div>
+    </Section>
+  </div>
 </SiteLayout>
