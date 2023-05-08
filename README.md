@@ -1,6 +1,6 @@
 # Apptic Development Website
 
-> **This repository contains the code for the Apptic Development website, which can be accessed at [apptic.deno.dev](https://apptic.deno.dev)**
+> **This repository contains the code for the Apptic Development website, which can be accessed at [apptic.deno.dev](https://apptic-dev.deno.dev)**
 
 <p align="center"> 
     <a href="https://github.com/Apptic-Developement"> 
@@ -28,7 +28,7 @@ We welcome contributions from anyone! Please fork this repository, make your cha
 
 ## ☎️ Contact Us
 
-If you have any questions or concerns, please feel free to contact us at [site](https://apptic.deno.dev/#contact).
+If you have any questions or concerns, please feel free to contact us at [site](https://apptic-dev.deno.dev/#contact).
 
 ---
 
