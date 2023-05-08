@@ -1,7 +1,8 @@
 name: Deploy
 on:
+  push: ["*"]
   release:
-    types: [published, edited ]
+    types: [published, edited]
 
 jobs:
   deploy:
@@ -12,24 +13,30 @@ jobs:
       contents: read # Needed to clone the repository
 
     steps:
-      - name: Clone repository
-        uses: actions/checkout@v3 
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          submodules: "recursive"
 
-      # Not using npm? Change `npm ci` to `yarn install` or `pnpm i`
-      - name: Install dependencies
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Install Dependencies
         run: |
-          cd website
-          npm i
+          cd website 
+          npm install
 
       # Not using npm? Change `npm run build` to `yarn build` or `pnpm run build`
       - name: Build Astro
         run: |
-         cd website 
-         npm run build
+          cd website 
+          npm run build
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: apptic-dev 
+          project: apptic-dev
           entrypoint: server/entry.mjs
           root: website/dist
