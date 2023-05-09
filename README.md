@@ -13,8 +13,7 @@
 - Deno
 - Astro
 - Tailwind CSS
-- CMS
-- MDX
+- Markdown 
 
 ## 🧿 Installation and Setup
 
